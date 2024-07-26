@@ -8,7 +8,7 @@
           <include name="congAM"/>
           <include name="congBC"/>
           <include name="confBM"/>
-          <include name="wishListTest"/>
+          <include name="productcheckOutEndTOEndTest"/>
         </methods>
       </class> <!-- demoWebShopAppEndtoEnd.ProductCheckOut -->
     </classes>

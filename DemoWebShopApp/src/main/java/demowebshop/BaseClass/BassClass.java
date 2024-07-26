@@ -14,12 +14,15 @@ import org.testng.annotations.BeforeMethod;
 import demowebshop.ObjectRepository.LogOutPage;
 import demowebshop.ObjectRepository.UserLoginpage;
 import demowebshop.generic.fileutility.PropertyFileUtility;
+import demowebshop.generic.webdriverutility.UtilityClassObject;
 
 public class BassClass {
+	public WebDriver driver = null;
+	public  static WebDriver sdriver = null;
 	//user reporter.log in place of sysout
 	PropertyFileUtility pfu = new PropertyFileUtility();
 	
-	public WebDriver driver = null;
+	
 	
 	@BeforeClass
 	public void congBC() throws IOException {
@@ -38,6 +41,8 @@ public class BassClass {
 	    else {
 			driver = new  ChromeDriver();
 		}
+		sdriver = driver;
+		UtilityClassObject.setDriver(driver);
 		
 	}
 	
